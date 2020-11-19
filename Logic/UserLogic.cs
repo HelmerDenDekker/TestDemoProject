@@ -1,4 +1,5 @@
-﻿using Model.DalRepositories;
+﻿using DAL;
+using Model;
 
 namespace TestDemoProject
 {
@@ -19,8 +20,11 @@ namespace TestDemoProject
         public UserInfoDto GetUserInfo(int userId)
         {
             var user= _userRepository.FindById(userId);
+            if(user==null)
+                return null;
+            
             var userInfoDto = new UserInfoDto
-            {
+                {
                 UserId = user.Id,
                 UserName = user.UserName
             };
