@@ -11,12 +11,18 @@ namespace UnitTestProject
     {
         private Mock<ILogger> _logger;
 
+        /// <summary>
+        /// On every test initialize a new environment (with a new mock)
+        /// </summary>
         [TestInitialize]
         public void TestInitialize()
         {
             this._logger = new Mock<ILogger>();
         }
 
+        /// <summary>
+        /// On every test clenup the environment by deleting all of the mocks data
+        /// </summary>
         [TestCleanup]
         public void TestCleanup()
         {
@@ -86,7 +92,7 @@ namespace UnitTestProject
         /// Creates the logic, because the dependency injected 
         /// </summary>
         /// <returns></returns>
-        internal DependencyInjectedLogic CreateDependencyInjectedLogic()
+        private DependencyInjectedLogic CreateDependencyInjectedLogic()
         {
             return new DependencyInjectedLogic(_logger.Object);
         }

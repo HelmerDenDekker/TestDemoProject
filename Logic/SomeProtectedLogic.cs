@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Logic
+﻿namespace Logic
 {
-    public class ProtectedLogic
+    public class SomeProtectedLogic: SomeProtectedLogicHelper, ISomeProtectedLogic
     {
         /// <summary>
         /// Divides the numerator by the denumerator
@@ -19,19 +15,6 @@ namespace Logic
                 return double.NaN;
             }
             return numerator / denumerator;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        protected virtual bool IsDenumenatorNonZero(double denumerator)
-        {
-            if (denumerator == 0)
-            {
-                return false;
-            }
-            return true;
         }
     }
 }

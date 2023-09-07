@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations;
 using DAL;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using TestDemoProject;
