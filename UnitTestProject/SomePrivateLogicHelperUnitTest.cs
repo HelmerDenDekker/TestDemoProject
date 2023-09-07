@@ -47,7 +47,7 @@ namespace UnitTestProject
         }
 
         /// <summary>
-        /// 
+        /// Create a shared method for creating a PrivateObject for enetering private methods in SomePrivateLogicHelper
         /// </summary>
         /// <returns></returns>
         private PrivateObject CreateSomePrivateLogicHelper()
