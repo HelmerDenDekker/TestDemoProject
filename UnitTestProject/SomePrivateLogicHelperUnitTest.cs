@@ -10,15 +10,13 @@ namespace UnitTestProject
         private PrivateObject _somePrivateLogicHelper;
 
         /// <summary>
-        /// Initialize the test with a new ExposedSomePrivateLogicHelper
+        /// Initialize each test with a new SomePrivateLogicHelper PrivateObject
         /// </summary>
         [TestInitialize]
         public void TestInitialize()
         {
             _somePrivateLogicHelper = CreateSomePrivateLogicHelper();
         }
-
-        
 
         [TestMethod]
         public void IsDenumenatorNonZero_WithNonZeroInput_ReturnsTrue()
@@ -48,7 +46,10 @@ namespace UnitTestProject
             Assert.AreEqual(false, result);
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private PrivateObject CreateSomePrivateLogicHelper()
         {
             var somePrivateLogicHelper = new SomePrivateLogicHelper();
